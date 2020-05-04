@@ -1,2 +1,2 @@
 # QUIZ-App
-vanilla JS app
+Vanilla JS app
