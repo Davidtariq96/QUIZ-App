@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIZ GAME</title>
-    <link rel="stylesheet" href="style.css">
+    <title>JS Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>      
-    <header>
-        <h3>QUIZ GAME</h3>
-    </header>
-    <div class="container-fliud">
-        <h4><i style="font-size: 2rem;">lets play!</i></h4>
-    <div class="card-wrapper">
-        <div class="question-number">
-        <h3 class="questions">Question <span class="question-num">1</span>of 5</h3>
+<body>
+    <div class="header">
+        <h2>Quiz Game</h2>
     </div>
-    <div class="question">
-        what is the full meaning of IQ?
+    <h4><i style="color: blue;">Lets Play!</i></h4>
+    <div class="quiz-wrapper">       
+    <div id="questionBox" class="question">
+        My Question
     </div>
     <div class="options">
-        <div id="0" class="option1 ">Intellectual quotient</div>
-        <div id="1" class="option2">Internet query</div>
-        <div id="2" class="option3 ">International qouta</div>
-        <div id="3">Intellectual quote</div>
+        <ul id="ul">
+            <li id="opt1" onclick="button(this)"></li>
+            <li id="opt2" onclick="button(this)"></li>
+            <li id="opt3" onclick="button(this)"></li>
+            <li id="opt4" onclick="button(this)"></li>
+        </ul>
     </div>
-        <div class="button">
-        <button type="button" class="start-btn">NEXT</button>
+    <div class="score">
+        <div class="next">
+            <button id="btnNext" type="button" onclick="next()">
+              Next
+            </button>
+        </div>
+        <div class="score-card">
+            SCORE: <span id="scoreCard">0</span>
+        </div>
     </div>
-    <div id="scores" >Score = </div>
-    </div>
-    <footer>
-        <section class="social-icons-wrapper">
-          <h5 style="color: white;text-align: center;">Made by Sami</h5><br>
-        <ul class="social-icons">
-          <li> <a href="https://twitter.com/tariq_david"><i class="fab fa-facebook-square"></i></a></li>
-          <li> <a href="https://twitter.com/tariq_david"><i class="fab fa-twitter-square"></i></a></li>
-          <li> <a href="https://www.instagram.com/tariq_david69/?hl=en"><i class="fab fa-instagram-square"></i></a></li>
-          <li> <a href="https://www.linkedin.com/mwlite/in/david-samuel-uche-ab8534179"><i class="fab fa-linkedin"></i></a></li>
-        </ul></section></footer>
-    </div>
-</div>   <script src="main.js"></script>
+</div>
+<h5>made by Sami</h5>
+    <section class="social-icons-wrapper">
+        <section class="social-icons">
+           <a href="https://twitter.com/tariq_david"><i class="fab fa-facebook-square"></i></a>
+           <a href="https://twitter.com/tariq_david"><i class="fab fa-twitter-square"></i></a>
+           <a href="https://www.instagram.com/tariq_david69/?hl=en"><i class="fab fa-instagram-square"></i></a>
+           <a href="https://www.linkedin.com/mwlite/in/david-samuel-uche-ab8534179"><i class="fab fa-linkedin"></i></a>    
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
