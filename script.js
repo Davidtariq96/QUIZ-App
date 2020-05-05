@@ -66,8 +66,8 @@ var app={
             this.load();
         },
         check: function(ele){
-            var id=ele.id.split('');
-            if(id[id.length-1]==this.questions[this.index].answer){
+            var me=ele.id;
+            if(me[me.length-1]==this.questions[this.index].answer){
                 this.score++;
                 ele.className="correct";
                 this.scoreCard();
@@ -90,7 +90,7 @@ var app={
         },
         score:0,
         scoreCard:function(){
-            scoreCard.innerHTML=this.questions.length + "/" + this.score;
+            scoreCard.innerHTML= this.score + "/"  + this.questions.length;
         }
 }
 
