@@ -65,16 +65,15 @@ var app={
             this.index++;
             this.load();
         },
-        check: function(ele){
-            var me=ele.id;
+        check: function(e){
+            var me=e.id;
             if(me[me.length-1]==this.questions[this.index].answer){
                 this.score++;
-                ele.className="correct";
+                e.className="correct";
                 this.scoreCard();
             }
             else{
-                ele.className="wrong";
-
+                e.className="wrong"
             }
         },
         preventClick:function(){
