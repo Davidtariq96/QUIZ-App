@@ -5,6 +5,8 @@ var opt1 = document.getElementById('opt1')
 var opt2 = document.getElementById('opt2')
 var opt3 = document.getElementById('opt3')
 var opt4 = document.getElementById('opt4')
+var tryAgain = document.getElementById('tryAgain')
+tryAgain.style.display = 'none';
 
 var app={
         questions:[
@@ -33,7 +35,9 @@ var app={
                 answer:2
             }          
         ],
+        //starting question from number 1
         index:0,
+        //creating a function to load the question on the page
         load:function(){
             if(this.index<=this.questions.length-1){
                 quizbox.innerHTML=this.index+1 + ". " +this.questions[this.index].q;
@@ -46,8 +50,17 @@ var app={
                 quizbox.innerHTML="Quiz Completed!";
                 ul.style.display="none";
                 nextButton.style.display="none";
+                tryAgain.style.display = "block";
+                tryAgain.style.cursor="pointer";
+                tryAgain.addEventListener("click",again);
+                function again(e){
+                    e.preventDefault();
+                    window.location = "index.html";
+                }
+
             }
         },
+        //making the next button to function
         next: function(){
             this.index++;
             this.load();
@@ -61,6 +74,7 @@ var app={
             }
             else{
                 ele.className="wrong";
+
             }
         },
         preventClick:function(){

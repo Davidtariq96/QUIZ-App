@@ -55,7 +55,7 @@ h4{
 .quiz-wrapper .options ul li{
   display: inline-block;
   background-color: grey;
-  width: 46%;
+  width: 100%;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 30px;
@@ -101,6 +101,11 @@ h4{
   margin-left: 0.7rem;
 }
 
+.quiz-wrapper .score .next button:hover{
+  cursor: pointer;
+  background: grey;
+}
+
 .quiz-wrapper .score .score-card{
   width: 60%;
   float: left;
@@ -124,6 +129,9 @@ h5{
 }
 .social-icons a{
   color: white;
+}
+.social-icons a i{
+  size: 200px;
 }
 @media only screen and (max-width:356px){
   .quiz-wrapper .score .next button{
