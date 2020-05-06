@@ -3,12 +3,15 @@ body{
   margin:0;
   padding:0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 2rem;
+  opacity: 1;
 }
 
 *{
   box-sizing: border-box;
 }
 .header h2{
+
   width: 100%;
   padding: 0rem;
   color: white;
@@ -18,6 +21,7 @@ body{
 h4{
   text-align: center;
   font-size: 1.8rem;
+  margin-top: 1rem;
 }
 .quiz-wrapper{
   height: 530px;
@@ -27,7 +31,7 @@ h4{
   margin: 30px auto;
   border-radius: 8px;
   padding:25px;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .quiz-wrapper .question{
@@ -83,13 +87,13 @@ h4{
 
 .quiz-wrapper .score {
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
   width: 100%;
 }
 
-.quiz-wrapper .score .next{
-  width: 30%;
-  float: left;
-}
 
 .quiz-wrapper .score .next button{
   padding: 0.5rem 1.4rem 0.5rem 1.4rem;
@@ -97,7 +101,6 @@ h4{
   background-color:blue;
   border: none;
   border-radius: 3px;
-  margin-top: 3rem;
   margin-left: 0.7rem;
 }
 
@@ -107,11 +110,10 @@ h4{
 }
 
 .quiz-wrapper .score .score-card{
-  width: 60%;
-  float: left;
+  
   line-height: 40px;
   font-size: 20px;
-  margin-top: 3rem;
+
 }
 
 .quiz-wrapper .score .score-card span{
@@ -127,12 +129,21 @@ h5{
   text-align: center;
   font-size: 1rem;
 }
+.social-icons{
+  display: flex;
+  max-width: 250px;
+  width: 100%;
+  justify-content:space-between ;
+}
+
 .social-icons a{
   color: white;
+  font-size: 2rem;
 }
-.social-icons a i{
-  size: 200px;
+.social-icons a:nth-child(1){
+  margin-left: 2rem;
 }
+
 @media only screen and (max-width:356px){
   .quiz-wrapper .score .next button{
       margin-top: 0.5rem;

@@ -67,13 +67,15 @@ var app={
         },
         check: function(e){
             var me=e.id;
-            if(me[me.length-1]==this.questions[this.index].answer){
+            let correctAns = this.questions[this.index].answer;
+            if(me[me.length-1]== correctAns){
                 this.score++;
                 e.className="correct";
                 this.scoreCard();
             }
-            else{
-                e.className="wrong"
+            else{                
+                e.className="wrong";
+                
             }
         },
         preventClick:function(){
@@ -95,8 +97,8 @@ var app={
 
 window.load=app.load();
 
-function button(ele){
-    app.check(ele);
+function button(e){
+    app.check(e);
     app.preventClick();
 }
 
