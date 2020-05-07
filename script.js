@@ -1,13 +1,12 @@
-var ul = document.getElementById('ul')
-var nextButton = document.getElementById('btnNext');
-var quizbox = document.getElementById('questionBox')
-var opt1 = document.getElementById('opt1')
-var opt2 = document.getElementById('opt2')
-var opt3 = document.getElementById('opt3')
-var opt4 = document.getElementById('opt4')
-var tryAgain = document.getElementById('tryAgain')
+let ul = document.getElementById('ul')
+let nextButton = document.getElementById('btnNext');
+let quizbox = document.getElementById('questionBox')
+let opt1 = document.getElementById('opt1')
+let opt2 = document.getElementById('opt2')
+let opt3 = document.getElementById('opt3')
+let opt4 = document.getElementById('opt4')
+let tryAgain = document.getElementById('tryAgain')
 tryAgain.style.display = 'none';
-
 var app={
         questions:[
             {
@@ -50,6 +49,7 @@ var app={
                 quizbox.innerHTML="Quiz Completed!";
                 ul.style.display="none";
                 nextButton.style.display="none";
+                scoreCard.innerHTML= this.score;
                 tryAgain.style.display = "block";
                 tryAgain.style.cursor="pointer";
                 tryAgain.addEventListener("click",again);
@@ -74,10 +74,12 @@ var app={
                 this.scoreCard();
             }
             else{                
-                e.className="wrong";
+                e.className="wrong" 
                 
             }
+            
         },
+        
         preventClick:function(){
             for(let i=0; i<ul.children.length; i++){
                 ul.children[i].style.pointerEvents="none";
