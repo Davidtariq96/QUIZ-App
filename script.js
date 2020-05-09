@@ -49,7 +49,7 @@ var app={
                 quizbox.innerHTML="Quiz Completed!";
                 ul.style.display="none";
                 nextButton.style.display="none";
-                scoreCard.innerHTML= this.score;
+                scoreCard.innerHTML= this.score
                 tryAgain.style.display = "block";
                 tryAgain.style.cursor="pointer";
                 tryAgain.addEventListener("click",again);
@@ -70,11 +70,11 @@ var app={
             let correctAns = this.questions[this.index].answer;
             if(me[me.length-1]== correctAns){
                 this.score++;
-                e.className="correct";
+                e.classList.add("correct");
                 this.scoreCard();
             }
             else{                
-                e.className="wrong" 
+                e.classList.add("wrong"); 
                 
             }
             
